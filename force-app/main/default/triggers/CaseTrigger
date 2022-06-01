@@ -1,0 +1,4 @@
+trigger OpportunityTrigger on Opportunity (before insert, before update, after insert, after update) {
+    if (trigger.isBefore && trigger.isInsert) {
+        CaseTriggerHandler.updateCase(Trigger.New, Trigger.Old, Trigger.NewMap, Trigger.OldMap);
+    }
