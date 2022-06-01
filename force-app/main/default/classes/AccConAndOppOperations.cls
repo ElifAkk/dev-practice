@@ -2,6 +2,7 @@ public class AccConAndOppOperations {
     public static decimal sumOfClosedWon() {
         List<Opportunity> ListOpp = [select Amount from Opportunity where stageName = 'Closed Won'];
         //testing for the branch
+        //again testing something
         Decimal sum = 0;
         for (opportunity eachOpp : ListOpp) {
             sum += eachOpp.Amount;
